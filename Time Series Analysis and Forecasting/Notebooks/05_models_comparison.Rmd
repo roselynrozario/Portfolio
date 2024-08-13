@@ -1,0 +1,55 @@
+---
+title: "Model Comparison"
+output: pdf_document
+---
+
+# Libraries
+
+```{r}
+library(ggplot2)
+```
+
+
+# Load Data
+
+```{r}
+load("../data/processed/ts_test_data")
+load("../data/processed/model_3_forecast_values.RData")
+load("../data/processed/model_4_forecast_values.RData")
+load("../data/processed/model_5_forecast_values.RData")
+```
+
+
+# Forecasts
+
+```{r}
+autoplot(ts_test_data, series = "Historical (Test)") +
+    autolayer(model_5_forecast_values$mean, series = "NNAR") +
+    autolayer(model_4_forecast_values$mean, series = "ARFIMA") +
+    autolayer(model_3_forecast_values$mean, series = "ETS") +
+    autolayer(model_1_forecast_values$mean, series = "SNAIVE") +
+    labs(title = "Forecast Model Comparison",
+         x = "Date", y = "Benzene Concentration") +
+    theme_minimal()
+```
+
+
+# Metrics
+
+```{r}
+data <- data.frame(
+  Model = c("SNAIVE", "SNAIVE", "SNAIVE", "ETS", "ETS", "ETS", "ARFIMA", "ARFIMA", "ARFIMA", "NNAR", "NNAR", "NNAR"),
+  Metric = c("MRE", "MAE","RMSE", "MRE", "MAE","RMSE", "MRE", "MAE","RMSE", "MRE", "MAE","RMSE"),
+  Value = c( 0.347, 2.108, 2.933, 0.327, 1.832, 2.505, 0.559, 2.997, 3.534, 0.689, 3.6603, 4.704)
+)
+
+ggplot(data, aes(x = Model, y = Value, fill = Metric)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  geom_text(aes(label = Value), position = position_dodge(width = 0.8), vjust = -0.5, size = 3.5) +  # Labels On Top of Bars
+  labs(title = "Evaluation Metric per Model",
+       x = "Model",
+       y = "Value") +
+  scale_fill_brewer(palette = "Set2") +  # Color Palette
+  theme_minimal(base_size = 15)  # Minimal Theme with Larger Font Size
+```
+
