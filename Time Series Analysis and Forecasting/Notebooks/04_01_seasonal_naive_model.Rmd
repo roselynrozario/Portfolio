@@ -27,6 +27,7 @@ model_1_seasonal_naive <- create_seasonal_naive_model(ts_train_data, frequency =
 
 ```{r}
 model_1_forecast_values <- forecast_seasonal_naive(model_1_seasonal_naive, forecast_horizon = nrow(ts_test_data))
+save(model_1_forecast_values, file = "../data/processed/model_1_forecast_values.RData")
 ```
 
 
