@@ -1,0 +1,59 @@
+---
+title: "Seasonal Naïve"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/model_1_seasonal_naive.R")
+load("../data/processed/ts_train_data")
+load("../data/processed/ts_test_data")
+```
+
+
+# Introduction
+
+Apply a Seasonal Naïve Model to forecast benzene concentration levels for the next 25 days.
+
+
+# Create Seasonal Naïve Model
+
+```{r pressure, echo=FALSE}
+model_1_seasonal_naive <- create_seasonal_naive_model(ts_train_data, frequency = 7, forecast_horizon = nrow(ts_test_data)) 
+```
+
+
+# Forecast the Next 25 Days (Test Dataset Length)
+
+```{r}
+model_1_forecast_values <- forecast_seasonal_naive(model_1_seasonal_naive, forecast_horizon = nrow(ts_test_data))
+```
+
+
+# Plot Forecast vs Historical Data
+
+```{r}
+plot_seasonal_naive_forecast(model_1_seasonal_naive$mean, ts_train_data, ts_test_data)
+```
+
+
+# Model Residuals
+
+```{r}
+checkresiduals(model_1_seasonal_naive)
+```
+
+
+# Model Residuals Test
+
+```{r}
+seasonal_naive_residuals <- residuals(model_1_seasonal_naive)
+residuals_test(seasonal_naive_residuals)
+```
+
+
+# Evaluation Metrics
+
+```{r warning=FALSE}
+evaluation_metrics(as.numeric(ts_test_data), model_1_forecast_values$mean)
+```

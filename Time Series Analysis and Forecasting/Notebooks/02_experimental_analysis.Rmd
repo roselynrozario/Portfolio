@@ -1,0 +1,50 @@
+---
+title: "Experimental Analysis"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/experimental_analysis.R")
+load("../data/processed/data_daily")
+```
+
+
+# Time Series Plots
+
+Plot the Time Series Data to Visualize the Trends and Patterns of Benzene Concentration and Other Environmental Factors
+
+```{r}
+plot_time_series(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+```
+
+
+# Plot ACF
+
+Plot the ACF of Benzene Concentration to Observe the Autocorrelations
+
+```{r acf}
+plot_acf(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+```
+
+
+# Plot PACF
+
+Plot the PACF of Benzene Concentration to Observe the Partial Autocorrelations
+
+```{r pressure, echo=FALSE}
+plot_pacf(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+```
+
+
+# Hypothesis Testing
+
+Conduct Hypothesis Testing to Check the Stationarity of the Benzene Concentration Time Series
+
+```{r warning=FALSE}
+hypothesis_tests <- conduct_hypothesis_testing(data_daily, "daily_avg_benzene")
+
+# Print Detailed Results for Each Test
+print(hypothesis_tests$adf_test)
+print(hypothesis_tests$kpss_test)
+```

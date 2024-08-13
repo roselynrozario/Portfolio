@@ -1,0 +1,75 @@
+---
+title: "Exponential Smoothing"
+output: pdf_document
+---
+
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/model_2_ets.R")
+load("../data/processed/ts_train_data")
+load("../data/processed/ts_test_data")
+```
+
+
+# Introduction
+
+Apply an Exponential Smoothing model to forecast benzene concentration levels for the next 25 days.
+
+
+# Auto ETS
+
+```{r}
+auto_ets(ts_train_data)
+```
+
+
+# Custom Search
+
+```{r}
+ets_model <- loop_ets(ts_train_data)
+```
+
+
+# Components
+
+```{r}
+autoplot(ets_model)
+```
+
+
+# Forecast the Next 25 Days (Test Dataset Length)
+
+```{r}
+model_2_forecast_values <- forecast_ets(ets_model, forecast_horizon = nrow(ts_test_data))
+save(model_2_forecast_values, file = "../data/processed/model_2_forecast_values.RData")
+```
+
+
+# Plot Forecast vs Historical Data
+
+```{r}
+plot_ets_forecast(model_2_forecast_values$mean, ts_train_data, ts_test_data)
+```
+
+
+# Model Residuals
+
+```{r}
+checkresiduals(ets_model)
+```
+
+
+# Model Residual Test
+
+```{r}
+ets_residuals <- residuals(ets_model)
+residuals_test(ets_residuals)
+```
+
+
+# Evaluation Metrics
+
+```{r}
+evaluation_metrics(as.numeric(ts_test_data), model_2_forecast_values$mean)
+```

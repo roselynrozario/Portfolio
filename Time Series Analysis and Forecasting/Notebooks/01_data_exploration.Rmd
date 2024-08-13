@@ -1,0 +1,127 @@
+---
+title: "Data Exploration"
+output: pdf_document
+---
+
+# Introduction
+
+This notebook presents an exploratory data analysis (EDA) of the air quality dataset. The analysis involves loading the data, summarizing it, and generating visualizations to understand its structure and characteristics.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/data_exploration.R")
+```
+
+
+# Load Data
+
+Load the Dataset Using the load_data Function
+
+```{r load_data}
+file_path <- '../data/raw/AirQualityUCI.xlsx'
+data <- load_data(file_path)
+head(data)
+```
+
+
+# Summarize Data
+
+Summarize the Data to Get an Overview of Its Structure and Statistics
+
+```{r summarize}
+summarize_data(data)
+```
+
+
+# Missing Values
+
+Check for Missing Values in the Dataset
+
+```{r}
+missing_values <- count_missing_values(data)
+print(missing_values)
+```
+
+
+# Impute Missing Values
+
+Impute the Missing Values Using Linear Interpolation
+
+```{r}
+data <- impute_missing_values(data)
+```
+
+
+# Summarize Data After Imputation
+
+Summarize the Data Again After Imputing the Missing Values to See the Changes
+
+```{r}
+summarize_data(data)
+```
+
+
+# Time Series Plots
+
+Plot the Time Series Data to Visualize the Trends and Patterns of Different Gas Concentrations and Environmental Factors
+
+```{r}
+plot_time_series(data, 'C6H6(GT)', 'C6H6(GT) Time Series Data')
+plot_time_series(data, 'PT08.S2(NMHC)', 'PT08.S2(NMHC) Time Series Data')
+plot_time_series(data[(1:24*30*12),], 'C6H6(GT)', 'C6H6(GT) Time Series Data')
+```
+
+
+# Correlation Analysis
+
+Perform Correlation Analysis to Understand the Relationships Between Different Variables in the Dataset
+
+```{r}
+correlation_columns <- c('C6H6(GT)', 'PT08.S2(NMHC)', 'T', 'RH')
+plot_correlations(data, correlation_columns)
+```
+
+
+# Distribution Analysis
+
+Visualize the Distribution of Each Variable to Understand Their Spread and Identify Any Potential Skewness or Abnormalities
+
+```{r}
+data_distribution(data, 'C6H6(GT)', 'C6H6(GT) Data Distribution')
+```
+
+
+# Aggregate to Daily Data (Downsampling)
+
+Aggregate the Data to a Daily Level
+
+```{r}
+data_daily <- aggregate_to_daily(data)
+head(data_daily)
+```
+
+
+# Time Series Plots
+
+Plot the Time Series Data to Visualize the Trends and Patterns of Benzene Concentration and Other Environmental Factors
+
+```{r}
+plot_time_series(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+```
+
+# Decomposition
+
+```{r}
+plot_decomposition(data_daily, "daily_avg_benzene", freq = 7)
+```
+
+Decomposition Conclusions:
+* No Trend
+* Weekly Seasonality
+* Data Has a Random Noise
+
+# Decomposition - ALT Plot
+
+```{r}
+plot_decomposition_ggplot(data_daily, "daily_avg_benzene", freq = 7)
+```

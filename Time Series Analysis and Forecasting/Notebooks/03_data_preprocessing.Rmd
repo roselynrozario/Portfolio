@@ -1,0 +1,98 @@
+---
+title: "Data Pre-Processing"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/data_preprocessing.R")
+load("../data/processed/data_daily")
+```
+
+
+# Introduction
+
+This notebook outlines the data pre-processing steps for the air quality dataset, focusing on preparing the data for modeling. The steps include checking for stationarity, performing optional feature engineering, and splitting the data into training and testing sets.
+
+
+# Check Stationarity
+
+Check the Stationarity of the Benzene Concentration Time Series
+
+```{r stationarity}
+plot_time_series(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+plot_acf(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+plot_pacf(data_daily, "daily_avg_benzene", "Daily Average Benzene Concentration")
+```
+
+```{r}
+benzene <- ts(data_daily["daily_avg_benzene"], frequency = 7)
+benzene_diff <- diff(benzene, lag = 7)
+benzene_diff_diff <- diff(benzene_diff, lag = 1)
+tsdisplay(benzene)
+tsdisplay(benzene_diff)
+tsdisplay(benzene_diff_diff)
+```
+
+```{r warning=FALSE}
+
+hypothesis_tests_diff <- conduct_hypothesis_testing(as.data.frame(benzene_diff), "daily_avg_benzene")
+hypothesis_tests_diff_diff <- conduct_hypothesis_testing(as.data.frame(benzene_diff_diff), "daily_avg_benzene")
+
+print(hypothesis_tests_diff$adf_test) # Stationary
+print(hypothesis_tests_diff$kpss_test) # Stationary
+
+print(hypothesis_tests_diff_diff$adf_test) # Stationary
+print(hypothesis_tests_diff_diff$kpss_test) # Stationary
+```
+
+Check the Stationarity of the Benzene Concentration Time Series
+
+```{r pressure, echo=FALSE}
+hypothesis_tests <- conduct_hypothesis_testing(data_daily, "daily_avg_benzene")
+
+# Print Detailed Results for Each Test
+print(hypothesis_tests$adf_test) # Stationary
+print(hypothesis_tests$kpss_test) # Almost Non-Stationary
+```
+
+
+# Feature Engineering 
+
+Create Interaction Feature Between Temperature and Humidity
+
+```{r}
+#data <- feature_engineering(data)
+```
+
+
+# Split Data into Training and Testing Sets
+
+Split the Data Into Training and Testing Sets Based on a Specified Datetime
+
+```{r}
+split_datetime <- "2005-03-10 00:00:00"  # Specify Datetime for the Split
+split <- split_data(data_daily, split_datetime)
+train_data <- split$train
+test_data <- split$test
+head(train_data)
+head(test_data)
+```
+
+
+# Save Clean Dataset
+
+Save the Clean Dataset to for Modeling
+
+```{r}
+ts_data <- ts(data_daily["daily_avg_benzene"], frequency = 7)
+ts_train_data <- ts(train_data["daily_avg_benzene"], frequency = 7)
+ts_test_data <- ts(test_data["daily_avg_benzene"],start = c(53,3) , frequency = 7)
+ts_train_data_s <- diff(diff(ts(train_data["daily_avg_benzene"], frequency = 7), lag = 7), lag = 1)
+ts_test_data_s <- diff(diff(ts(test_data["daily_avg_benzene"],start(end(ts_train_data_s)), frequency = 7), lag = 7), lag = 1)
+```
+
+```{r}
+save(ts_train_data, file = "../data/processed/ts_train_data")
+save(ts_test_data, file = "../data/processed/ts_test_data")
+```

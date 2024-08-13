@@ -1,0 +1,61 @@
+---
+title: "ARFIMA"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("../src/model_3_arfima.R")
+load("../data/processed/ts_train_data")
+load("../data/processed/ts_test_data")
+```
+
+
+# Introduction
+
+Apply an ARFIMA model to forecast benzene concentration levels for the next 25 days.
+
+
+# Create ARFIMA Model
+
+```{r}
+arfima_model <- create_arfima_model(ts_train_data)
+summary(arfima_model)
+```
+
+
+# Forecast the Next 25 Days (Test Dataset Length)
+
+```{r}
+model_3_forecast_values <- forecast_arfima(arfima_model, forecast_horizon = nrow(ts_test_data))
+save(model_3_forecast_values, file = "../data/processed/model_3_forecast_values.RData")
+```
+
+
+# Plot Forecast vs Historical Data
+
+```{r}
+plot_arfima_forecast(model_3_forecast_values$mean, ts_train_data, ts_test_data)
+```
+
+
+# Model Residuals
+
+```{r}
+checkresiduals(arfima_model)
+```
+
+
+# Model Residuals Test
+
+```{r}
+arfima_residuals <- residuals(arfima_model)
+residuals_test(arfima_residuals)
+```
+
+
+# Evaluation Metrics
+
+```{r warning=FALSE}
+evaluation_metrics(as.numeric(ts_test_data), model_3_forecast_values$mean)
+```
