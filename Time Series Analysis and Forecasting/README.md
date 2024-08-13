@@ -1,10 +1,9 @@
 <h1 align="center"> Air Quality Trends </h1>
 
-* Team 1
+**Team 1**  
+**Final Project**  
+**Time Series Analysis and Forecasting**
 
-* Final Project
-
-* Time Series Analysis and Forecasting
 
 ### Objective
 The project will identify peak gas concentration times to predict future air quality trends, aiming to curb the negative impacts of poor air quality on human life.
@@ -32,6 +31,7 @@ Time Series Analysis and Forecasting
 │   ├── 04_02_exponential_smoothing.Rmd                     # ETS Model
 │   ├── 04_03_arfima_model.Rmd                              # ARFIMA Model
 │   ├── 04_04_nnar_model.Rmd                                # NNAR Model
+│   ├── 05_models_comparison.Rmd                            # Comparing Models
 ├── Reports
 │   ├── 01_Data_Exploration.pdf                             # Data Exploration Output
 │   ├── 01b_Exploratory_Analysis.pdf                        # Exploratory Analysis Output
@@ -41,6 +41,7 @@ Time Series Analysis and Forecasting
 │   ├── 04_02_Exponential_Smoothing.pdf                     # ETS Model Output
 │   ├── 04_03_ARFIMA.pdf                                    # ARFIMA Model Output
 │   ├── 04_04_NNAR.pdf                                      # NNAR Model Output
+│   ├── 05_Models_Comparison.pdf                            # Models Comparison Output
 ├── Source Code
 │   ├── data_exploration.R                                  # Exploratory Data Analysis Scripts
 │   ├── data_preprocessing.R                                # Pre-Processing Scripts
