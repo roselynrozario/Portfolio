@@ -13,7 +13,7 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
 
 • Data Wrangling: OpenRefine
 
-• Data Visualization Software: Tableau
+• Data Visualization Software: PowerBI, Tableau
 
 • Database Management: MySQL, MongoDB, Neo4J
 
@@ -39,11 +39,13 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
    * [Anomaly Detection in Stocks – Deep Learning Class Project](#Anomaly-Detection-in-Stocks)
 5. [Real-Time Intelligent Systems](#Real-Time-Intelligent-Systems)
    * [Designing a Real-Time Stock Trading System – Final Project](#Designing-a-Real-Time-Stock-Trading-System)
+6. [Time Series Analysis and Forecasting](#Time-Series-Analysis-and-Forecasting)
+   * [Air Quality Trends - Final Project](#Air-Quality-Trends)
 
 
 ### 🚀 Algorithmic Marketing 🚀 <a name="Algorithmic-Marketing"></a>
 
-#### [Marketing Strategies for XYZ E-Commerce Company – Group Project](https://github.com/roselynrozario/portfolio/tree/main/Algorithmic%20Marketing)* <a name="Marketing-Strategies-for-XYZ-E-Commerce-Company"></a>
+#### [Marketing Strategies for XYZ E-Commerce Company – Group Project](https://github.com/roselynrozario/portfolio/tree/main/Algorithmic%20Marketing)<sup>[1](#footnote1)</sup> <a name="Marketing-Strategies-for-XYZ-E-Commerce-Company"></a>
 
 Description: Analyzed a transnational dataset containing transactions occurring at a UK-based online only retail store to better understand their customers and their purchasing behaviors. 
 behavior.   
@@ -55,7 +57,7 @@ Techniques: Data Pre-Processing, Feature Engineering, Exploratory Data Analysis,
 
 ### 🛠️ Data Engineering 🛠️ <a name="Data-Engineering"></a>
 
-#### [Finding the Next Generation of Tennis Stars - Team Project](https://github.com/roselynrozario/portfolio/tree/main/Data%20Engineering)* <a name="Finding-the-Next-Generation-of-Tennis-Stars"></a>
+#### [Finding the Next Generation of Tennis Stars - Team Project](https://github.com/roselynrozario/portfolio/tree/main/Data%20Engineering)<sup>[1](#footnote1)</sup> <a name="Finding-the-Next-Generation-of-Tennis-Stars"></a>
 
 Description: Using tennis data spanning from 1968 until 2022 to evaluate several years' worth of previous data to determine what factors or metrics drive player performance, which in turn identifies key characteristics (e.g., player's playing style) amongst tennis players that will become the next greats of the sport. 
 
@@ -66,7 +68,7 @@ Techniques: Data Pre-Processing, Extract, Transform and Load (ETL), Normalizatio
 
 ### 📈 Linear and Non-Linear Models 📈 <a name="Linear-and-Non-Linear-Models"></a>
 
-#### [Gym Member Churn Analysis – Final Project](https://github.com/roselynrozario/portfolio/tree/main/Linear%20and%20Non-Linear%20Models)* <a name="Gym-Membership-Churn"></a>
+#### [Gym Member Churn Analysis – Final Project](https://github.com/roselynrozario/portfolio/tree/main/Linear%20and%20Non-Linear%20Models)<sup>[1](#footnote1)</sup> <a name="Gym-Membership-Churn"></a>
 
 Description: Examining data of a gym to predict membership churn through the utilization of linear and non-linear models and explainable AI methods. Evaluating findings from a business application perspective.   
 
@@ -77,7 +79,7 @@ Techniques: Exploratory Data Analysis, Logistic Regression, Recursive Feature El
 
 ### 🤖 Machine Learning and Predictive Analytics 🤖 <a name="Machine-Learning-and-Predictive-Analytics"></a>
 
-#### [Anomaly Detection in Stocks – Deep Learning Class Project](https://github.com/roselynrozario/portfolio/tree/main/Machine%20Learning%20and%20Predictive%20Analytics)* <a name="Anomaly-Detection-in-Stocks"></a>
+#### [Anomaly Detection in Stocks – Deep Learning Class Project](https://github.com/roselynrozario/portfolio/tree/main/Machine%20Learning%20and%20Predictive%20Analytics)<sup>[1](#footnote1)</sup> <a name="Anomaly-Detection-in-Stocks"></a>
 
 Description: Detecting anomalies within a stock dataset with 5 years' worth of data of S&P 500 companies using Deep Learning.   
 
@@ -88,7 +90,7 @@ Techniques: Exploratory Data Analysis, Feature Engineering & Transformations, Co
 
 ### 🕒 Real-Time Intelligent Systems 🕒 <a name="Real-Time-Intelligent-Systems"></a>
 
-#### [Designing a Real-Time Stock Trading System – Final Project](https://github.com/roselynrozario/portfolio/tree/main/Real-Time%20Intelligent%20Systems)* <a name="Designing-a-Real-Time-Stock-Trading-System"></a>
+#### [Designing a Real-Time Stock Trading System – Final Project](https://github.com/roselynrozario/portfolio/tree/main/Real-Time%20Intelligent%20Systems)<sup>[1](#footnote1)</sup> <a name="Designing-a-Real-Time-Stock-Trading-System"></a>
 
 Description: Creating a financial stock trading system, utilizing a client and server, that helps inform decisions for those that invest in stocks, through a several prong approach focused on on real-time forecasting, news sentiment analysis, and risk. Utilized Alpaca API for real stock and news data.
 
@@ -97,4 +99,16 @@ Language/Platform(s): Python via Google Colab, JupyterLab and IDE
 Techniques: API Call, ARIMA, RNN, Ensemble Model, News Sentiment Analysis, Client-Server Architecture, Backtesting   
 
 
-**Completed as Part of a University (Applied Data Science Master’s Program) Project*
+### ⏳ Time Series Analysis and Forecasting ⏳ <a name="Time-Series-Analysis-and-Forecasting"></a>
+
+#### [Air Quality Trends - Final Project](https://github.com/roselynrozario/portfolio/tree/main/Time%20Series%20Analysis%20and%20Forecasting)<sup>[1](#footnote1)</sup> <a name="Air-Quality-Trends"></a>
+
+Description: Examining gas concentrations of an Italian city to develop a time series model to accurately forecast benzene concentrations. 
+
+Language/Platform(s): R via RStudio and Python via JupyterLab
+
+Techniques: Exploratory Data Analysis, Experimental Analysis, Moving Average, Data Decomposition, Statistical Analysis, Seasonal Naive Model, ETS Model, ARFIMA Model, NNAR Model, Model Evaluations/Comparison 
+
+
+---
+<a name="footnote1">1</a>: *Completed as Part of a University (Applied Data Science Master’s Program) Project*
