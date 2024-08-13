@@ -6,6 +6,7 @@ output: pdf_document
 # Libraries
 
 ```{r}
+library(forecast)
 library(ggplot2)
 ```
 
@@ -14,9 +15,10 @@ library(ggplot2)
 
 ```{r}
 load("../data/processed/ts_test_data")
+load("../data/processed/model_1_forecast_values.RData")
+load("../data/processed/model_2_forecast_values.RData")
 load("../data/processed/model_3_forecast_values.RData")
 load("../data/processed/model_4_forecast_values.RData")
-load("../data/processed/model_5_forecast_values.RData")
 ```
 
 
@@ -24,9 +26,9 @@ load("../data/processed/model_5_forecast_values.RData")
 
 ```{r}
 autoplot(ts_test_data, series = "Historical (Test)") +
-    autolayer(model_5_forecast_values$mean, series = "NNAR") +
-    autolayer(model_4_forecast_values$mean, series = "ARFIMA") +
-    autolayer(model_3_forecast_values$mean, series = "ETS") +
+    autolayer(model_4_forecast_values$mean, series = "NNAR") +
+    autolayer(model_3_forecast_values$mean, series = "ARFIMA") +
+    autolayer(model_2_forecast_values$mean, series = "ETS") +
     autolayer(model_1_forecast_values$mean, series = "SNAIVE") +
     labs(title = "Forecast Model Comparison",
          x = "Date", y = "Benzene Concentration") +
@@ -52,4 +54,3 @@ ggplot(data, aes(x = Model, y = Value, fill = Metric)) +
   scale_fill_brewer(palette = "Set2") +  # Color Palette
   theme_minimal(base_size = 15)  # Minimal Theme with Larger Font Size
 ```
-
