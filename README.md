@@ -31,15 +31,17 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
 ### 📖 Table of Contents 📖 
 1. [Algorithmic Marketing](#Algorithmic-Marketing)
    * [Marketing Strategies for XYZ E-Commerce Company – Group Project](#Marketing-Strategies-for-XYZ-E-Commerce-Company)
-2. [Data Engineering](#Data-Engineering)
+2. [Research Capstone Project: Conversational AI](#Research-Capstone-Project)
+   * [CogniEdu: AI-Powered Academic Planning for Student Success](#CogniEdu)
+3. [Data Engineering](#Data-Engineering)
    * [Finding the Next Generation of Tennis Stars - Team Project](#Finding-the-Next-Generation-of-Tennis-Stars)
-3. [Linear and Non-Linear Models](#Linear-and-Non-Linear-Models)
+4. [Linear and Non-Linear Models](#Linear-and-Non-Linear-Models)
    * [Gym Member Churn Analysis – Final Project](#Gym-Membership-Churn)
-4. [Machine Learning and Predictive Analytics](#Machine-Learning-and-Predictive-Analytics)
+5. [Machine Learning and Predictive Analytics](#Machine-Learning-and-Predictive-Analytics)
    * [Anomaly Detection in Stocks – Deep Learning Class Project](#Anomaly-Detection-in-Stocks)
-5. [Real-Time Intelligent Systems](#Real-Time-Intelligent-Systems)
+6. [Real-Time Intelligent Systems](#Real-Time-Intelligent-Systems)
    * [Designing a Real-Time Stock Trading System – Final Project](#Designing-a-Real-Time-Stock-Trading-System)
-6. [Time Series Analysis and Forecasting](#Time-Series-Analysis-and-Forecasting)
+7. [Time Series Analysis and Forecasting](#Time-Series-Analysis-and-Forecasting)
    * [Air Quality Trends - Final Project](#Air-Quality-Trends)
 
 
@@ -47,12 +49,20 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
 
 #### [Marketing Strategies for XYZ E-Commerce Company – Group Project](https://github.com/roselynrozario/portfolio/tree/main/Algorithmic%20Marketing)<sup>[1](#footnote1)</sup> <a name="Marketing-Strategies-for-XYZ-E-Commerce-Company"></a>
 
-Description: Analyzed a transnational dataset containing transactions occurring at a UK-based online only retail store to better understand their customers and their purchasing behaviors. 
-behavior.   
+Description: Analyzed a transnational dataset containing transactions occurring at a UK-based online only retail store to better understand their customers and their purchasing behaviors.  
 
 Language/Platform: Python via JupyterLab
 
 Techniques: Data Pre-Processing, Feature Engineering, Exploratory Data Analysis, Association Rules Algorithm, K-Means Clustering 
+
+
+### 🧠 Research Capstone Project: Conversational AI 🧠 <a name="Research-Capstone-Project"></a>
+
+#### [CogniEdu: AI-Powered Academic Planning for Student Success](https://github.com/roselynrozario/CogniEdu) <a name="CogniEdu"></a>
+
+Description: Developed an academic planning tool, that is, an end-to-end solution, to help students effectively manage their academic schedules alongside other commitments.
+
+> *Details on Techniques Available in Project Repository*
 
 
 ### 🛠️ Data Engineering 🛠️ <a name="Data-Engineering"></a>
