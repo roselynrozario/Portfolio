@@ -50,5 +50,5 @@ Time Series Analysis and Forecasting
 │   ├── model_2_ets.R                                       # ETS Model
 │   ├── model_3_arfima.R                                    # ARFIMA Model
 │   ├── model_4_nnar_model.R                                # NNAR Model
-└── README.md                                               # Project Overview and Instructions
+└── README.md                                               # Project Overview
 ```
