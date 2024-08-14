@@ -1,25 +1,25 @@
-<h1 align="center"> Air Quality Trends </h1>
+<h3 align="center"> Air Quality Trends </h3>
 
 **Team 1**  
 **Final Project**  
 **Time Series Analysis and Forecasting**
 
 
-### Objective
+#### Objective
 The project will identify peak gas concentration times to predict future air quality trends, aiming to curb the negative impacts of poor air quality on human life.
 
-### Dataset
+#### Dataset
 The dataset examines gas concentrations in an Italian city, measured via a gas multi-sensor device from March 2004 to February 2005.
 
 > [Dataset Link](https://archive.ics.uci.edu/dataset/360/air+quality)
 
-#### Dataset Characteristics
+##### Dataset Characteristics
 - **Type**: Multivariate, Time-Series
 - **Feature Type**: Real
 - **Instances**: 9358
 - **Features**: 15
 
-### Project Structure
+#### Project Structure
 ```plaintext
 Time Series Analysis and Forecasting
 ├── Notebooks
@@ -50,5 +50,6 @@ Time Series Analysis and Forecasting
 │   ├── model_2_ets.R                                       # ETS Model
 │   ├── model_3_arfima.R                                    # ARFIMA Model
 │   ├── model_4_nnar_model.R                                # NNAR Model
+│   ├── Air_Quality_Trends_Final_Project.pdf                # Project Slides
 └── README.md                                               # Project Overview
 ```
