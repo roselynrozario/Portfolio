@@ -31,7 +31,7 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
 ### 📖 Table of Contents 📖 
 1. [Algorithmic Marketing](#Algorithmic-Marketing)
    * [Marketing Strategies for XYZ E-Commerce Company – Group Project](#Marketing-Strategies-for-XYZ-E-Commerce-Company)
-2. [Capstone Project (Research): Conversational AI](#Capstone-Project)
+2. [Conversational AI Research Capstone Project](#Capstone-Project)
    * [CogniEdu: AI-Powered Academic Planning for Student Success](#CogniEdu)
 3. [Data Engineering](#Data-Engineering)
    * [Finding the Next Generation of Tennis Stars - Team Project](#Finding-the-Next-Generation-of-Tennis-Stars)
