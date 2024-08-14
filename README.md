@@ -56,13 +56,13 @@ Language/Platform: Python via JupyterLab
 Techniques: Data Pre-Processing, Feature Engineering, Exploratory Data Analysis, Association Rules Algorithm, K-Means Clustering 
 
 
-### 🧠 Capstone Project (Research): Conversational AI 🧠 <a name="Capstone-Project"></a>
+### 🧠 Conversational AI Research Capstone Project 🧠 <a name="Capstone-Project"></a>
 
 #### [CogniEdu: AI-Powered Academic Planning for Student Success](https://github.com/roselynrozario/CogniEdu) <a name="CogniEdu"></a>
 
 Description: Developed an academic planning tool, that is, an end-to-end solution, to help students effectively manage their academic schedules alongside other commitments.
 
-> Details on Techniques Available in Project Repository
+> Details on Language/Platform and Techniques Available in Project Repository
 
 
 ### 🛠️ Data Engineering 🛠️ <a name="Data-Engineering"></a>
