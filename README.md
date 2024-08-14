@@ -64,6 +64,8 @@ Description: Developed an academic planning tool, that is, an end-to-end solutio
 
 > Details on Language/Platform and Techniques Available in Project Repository
 
+> Recognition: "Honorable Mention" in the University of Chicago's MS in Applied Data Science Summer 2024 Capstone Showcase
+
 
 ### 🛠️ Data Engineering 🛠️ <a name="Data-Engineering"></a>
 
