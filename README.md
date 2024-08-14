@@ -60,7 +60,7 @@ Techniques: Data Pre-Processing, Feature Engineering, Exploratory Data Analysis,
 
 #### [CogniEdu: AI-Powered Academic Planning for Student Success](https://github.com/roselynrozario/CogniEdu) <a name="CogniEdu"></a>
 
-Description: Developed an academic planning tool, that is, an end-to-end solution, to help students effectively manage their academic schedules alongside other commitments.
+Description: Co-developed an end-to-end academic planning tool designed to help students efficiently manage their academic schedules alongside other commitments, while also providing access to an AI-powered study assistant for enhanced learning support.
 
 > Details on Language/Platform and Techniques Available in Project Repository
 
