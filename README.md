@@ -5,26 +5,19 @@ Welcome to my portfolio! This portfolio includes examples of my work that utiliz
 
 ## 💻 Technical Skills 
 
-• Cloud: Google Cloud
-
-• Collaborative: Figma, Google Colab, SharePoint
-
-• Content Management System: Adobe Experience Manager
-
-• Data Wrangling: OpenRefine
-
-• Data Visualization Software: PowerBI, Tableau
-
-• Database Management: MySQL, MongoDB, Neo4J
-
-• Programming Languages: Python, R, SQL
-
-• Project Management: Jira, Monday.com, Trello
-
-• Statistical Analysis Tools: Statplus, STATA
-
-• Suites: Microsoft Office Suite, Google Suite, Apple iWorks
-
+| **Category**                        | **Tool(s)**                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Cloud**                           | ![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)                                                                                                                                                                                                                                       |
+| **Collaborative**                   | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252) ![SharePoint](https://img.shields.io/badge/Microsoft_SharePoint-0078D4?style=for-the-badge&logo=microsoft-sharepoint&logoColor=white) |
+| **Content Management System**       | ![Adobe Experience Manager](https://img.shields.io/badge/Adobe%20Experience%20Manager-FFFFFF?style=for-the-badge&logo=adobe&logoColor=FF0000&labelColor=white&color=white)                                                                                                                                                                                   |
+| **Data Wrangling**                  | <img width="83" alt="OpenRefine" src="https://github.com/user-attachments/assets/e3566e2c-1b51-400c-a874-61fb835a7055">                                                                                                                                                                                                                                      |
+| **Data Visualization Software**     | ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)                                                                                                                                           |
+| **Database Management**             | ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![Neo4J](https://img.shields.io/badge/Neo4j-018bff?style=for-the-badge&logo=neo4j&logoColor=white)                                                  |
+| **Frameworks**                      | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) |
+| **Programming Languages**           | ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white) <img width="76" alt="SQL" src="https://github.com/user-attachments/assets/d24a382e-b3c9-4976-8b46-2d6d37e5718d">  |
+| **Process Visualization and Management** | ![Microsoft Visio](https://img.shields.io/badge/Microsoft_Visio-3955A3?style=for-the-badge&logo=microsoft-visio&logoColor=white) <img width="83" alt="Eraser" src="https://github.com/user-attachments/assets/fa685bf1-901c-4dec-b78c-a1afe60d2ecb">                                                                                                           |
+| **Project Management**              | ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) <img width="137" alt="Monday.com" src="https://github.com/user-attachments/assets/b37db2f5-2699-4769-951a-230e22ab28e3"> ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)                         |
+| **Statistical Analysis Tools**      | <img width="83" alt="STATA" src="https://github.com/user-attachments/assets/680a1d41-75c8-4bb0-accf-4f5479967818">                                                                                                                                                                                                                                          |
 
 ## 📊 Works/Projects
 
